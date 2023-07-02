@@ -29,8 +29,13 @@ int[] FillArrayRandom(int tmpLength, int tmpMin, int tmpMax)
     return tmpArray;
 }
 
+void PrintArray(int[] tmpArray)
+{
+    Console.WriteLine($"[" + string.Join(", ", tmpArray) + "]");
+}
+
 int len = ReadInt("Введите размер массива:");
 int min = ReadInt("Введите минимальное значение (не меньше -255):");
 int max = ReadInt("Введите максимальное значение (не больше 255):");
-
-Console.WriteLine($"[" + string.Join(", ", FillArrayRandom(len, min, max)) + "]");
+int[] array = FillArrayRandom(len, min, max);
+PrintArray(array);
