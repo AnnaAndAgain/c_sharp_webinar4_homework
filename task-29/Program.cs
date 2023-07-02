@@ -10,6 +10,7 @@
 
 */
 
+
 int[] array = new int[8];
 Random randnum = new Random();
 

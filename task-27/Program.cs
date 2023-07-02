@@ -9,15 +9,41 @@
 
 /// тут ваще мимо
 
-Console.Write("Введите число:");
-int N = Convert.ToInt32(Console.ReadLine());
-int sum = 0;
-int[] digits;
-
-for (int i = 1; i < N*10; i++)
+int ReadInt(string text) 
 {
-    int 
-
+    Console.WriteLine(text);
+    return Convert.ToInt32(Console.ReadLine());
 }
 
-Console.WriteLine(sum);
+int[] NumberByDigits(int number) 
+{
+    string tmpString = Convert.ToString(number);
+    //System.Console.WriteLine(tmpString);
+
+    int[] tmpArray = new int[tmpString.Length];
+    System.Console.WriteLine(string.Join(",", tmpArray));
+
+    for (int i=0; i < tmpString.Length; i++)
+    {
+        char X = int.Parse(tmpString[i]);
+        //tmpArray[i] = ;
+        System.Console.WriteLine(X);
+        //System.Console.WriteLine(string.Join(",", tmpArray));
+    }
+    return tmpArray;
+}
+
+int SumArray(int[] tmpArray)
+{
+    int tmpSum = 0;
+    for (int i = 0; i < tmpArray.Length; i++)
+    {
+        tmpSum = tmpSum + tmpArray[i];
+    }
+    return tmpSum;
+}
+
+int N = ReadInt("Введите число:");
+int[] digits = NumberByDigits(N);
+System.Console.WriteLine(string.Join(",", digits));
+Console.WriteLine(SumArray(digits));

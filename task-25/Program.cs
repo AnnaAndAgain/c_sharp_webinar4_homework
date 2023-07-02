@@ -5,11 +5,14 @@
 2, 4 -> 16
 */
 
-Console.Write("Введите число:");
-double A = Convert.ToDouble(Console.ReadLine());
+int ReadInt(string text) 
+{
+    Console.WriteLine(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
 
-Console.Write("Введите степень (натуральное число):");
-int B = Convert.ToInt32(Console.ReadLine());
+int A = ReadInt("Введите число:");
+int B = ReadInt("Введите степень (натуральное число):");
 
 if (B>0) 
 {
